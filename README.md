@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/dantswain/heavy_meta.svg?branch=master)](https://travis-ci.org/dantswain/heavy_meta)
 
-🤘o
+🤘🤘🤘🤘🤘🤘 🤘🤘 🤘 🤘 🤘
 
 Heavy Meta is a recording metadata manager.
 
