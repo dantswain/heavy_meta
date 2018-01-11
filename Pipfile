@@ -15,6 +15,7 @@ pytest-django = "*"
 
 django = "*"
 "psycopg2" = "*"
+django-extensions = "*"
 
 
 [requires]
