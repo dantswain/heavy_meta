@@ -1,0 +1,24 @@
+language: python
+
+python:
+  - 3.6.3
+
+cache:
+  pip: true
+  directories:
+    - ~/.virtualenvs
+
+install:
+  - pip install -U pip wheel
+  - pip install setuptools==24.0.3
+  - pip install pipenv
+  - pipenv install -d
+
+env:
+  - HEAVY_META_DB_NAME=heavy_meta-test
+
+before_script:
+  - ./ci/setup.sh
+
+script:
+  - pytest
