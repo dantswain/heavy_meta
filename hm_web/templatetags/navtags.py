@@ -13,5 +13,5 @@ def active(request, pattern):
     """
     if request.path == pattern:
         return 'active'
-    else:
-        return ''
+
+    return ''
