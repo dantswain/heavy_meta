@@ -7,5 +7,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('login',
          auth_views.LoginView.as_view(template_name='hm_web/login.html'),
-         name='login')
+         name='login'),
+    path('logout',
+         auth_views.LogoutView.as_view(next_page='/'),
+         name='logout')
 ]
