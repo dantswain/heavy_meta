@@ -9,6 +9,7 @@ name = "pypi"
 
 pytest = "*"
 pytest-django = "*"
+pytest-cov = "*"
 
 
 [packages]
