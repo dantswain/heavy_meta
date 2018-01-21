@@ -25,3 +25,9 @@ def user(password):
                      email='foo@bar.com',
                      password=password)
     return the_user
+
+@pytest.fixture
+def logged_in_user(user, password, client):
+    client.login(username=user.username, password=password)
+
+    return user
