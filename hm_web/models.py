@@ -14,7 +14,7 @@ class Song(models.Model):
     created_by = models.ForeignKey(User, on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    note = models.TextField()
+    note = models.TextField(blank=True, null=True)
 
 
 class Track(models.Model):
@@ -27,7 +27,7 @@ class Track(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
-    note = models.TextField()
+    note = models.TextField(blank=True, null=True)
 
 
 class Take(models.Model):
@@ -40,7 +40,7 @@ class Take(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     track = models.ForeignKey(Track, on_delete=models.CASCADE)
-    note = models.TextField()
+    note = models.TextField(blank=True, null=True)
 
 
 class TakeComment(models.Model):
