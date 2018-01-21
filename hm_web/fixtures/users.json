@@ -1,0 +1,20 @@
+[
+{
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+        "password": "pbkdf2_sha256$100000$Ye8VIJm8MbqL$sLGCRj0udmQIsp6CNRv4U730xOLYrJZfH1zEk+1GGvI=",
+        "last_login": "2018-01-16T02:36:50.945Z",
+        "is_superuser": false,
+        "username": "dantswain",
+        "first_name": "",
+        "last_name": "",
+        "email": "dan.t.swain@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2018-01-16T01:56:53.609Z",
+        "groups": [],
+        "user_permissions": []
+    }
+}
+]

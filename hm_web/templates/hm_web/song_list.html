@@ -1,0 +1,12 @@
+{% extends 'hm_web/layout.html' %}
+
+{% block content %}
+<h2>Songs</h2>
+<ul>
+  {% for song in song_list %}
+  <li>{{ song.title  }}</li>
+  {% empty %}
+  <li>No songs yet</li>
+  {% endfor %}
+</ul>
+{% endblock %}

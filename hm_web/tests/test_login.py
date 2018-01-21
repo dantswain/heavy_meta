@@ -3,8 +3,6 @@ Tests for logging in and out
 """
 import pytest
 from django.contrib import auth
-from django.contrib.auth.models import User
-
 
 # pylint: disable=redefined-outer-name
 
