@@ -12,19 +12,6 @@ from django.contrib.auth.models import User
 PASSWORD = 'abc123'
 
 
-@pytest.fixture
-def user():
-    """
-    Returns a user model
-    """
-    the_user = User\
-        .objects\
-        .create_user(username='test_user',
-                     email='foo@bar.com',
-                     password=PASSWORD)
-    return the_user
-
-
 def test_login_page(client):
     resp = client.get('/login')
     assert resp.status_code == 200
@@ -37,9 +24,9 @@ def test_logout_page(client):
 
 
 @pytest.mark.django_db
-def test_login(user, client):
+def test_login(user, password, client):
     resp = client.post('/login',
-                       {'username': user.username, 'password': PASSWORD})
+                       {'username': user.username, 'password': password})
     assert resp.status_code == 302
     assert resp.url == '/'
 
@@ -69,8 +56,8 @@ def test_logout_not_logged_in(client):
 
 
 @pytest.mark.django_db
-def test_logout_post(user, client):
-    client.login(username=user.username, password=PASSWORD)
+def test_logout_post(user, password, client):
+    client.login(username=user.username, password=password)
 
     resp = client.post('/logout')
     assert resp.status_code == 302
