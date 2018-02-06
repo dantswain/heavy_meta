@@ -10,6 +10,7 @@ name = "pypi"
 pytest = "*"
 pytest-django = "*"
 pytest-cov = "*"
+pylint = "*"
 
 
 [packages]

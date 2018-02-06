@@ -22,3 +22,4 @@ before_script:
 
 script:
   - pytest -vvv --cov=.
+  - pylint hm_web -r n -f colorized
