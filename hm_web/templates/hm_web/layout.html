@@ -28,12 +28,15 @@
 
         {% load navtags %}
         {% url 'index' as home %}
+        {% url 'songs' as songs %}
         {% url 'login' as login %}
         {% url 'logout' as logout %}
 
 				<div id="navbar" class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li class="{% active request home %}"><a href="/">Home</a></li>
+            {% if user.is_authenticated %}
+						<li class="{% active request songs %}"><a href="/songs">Songs</a></li>
+            {% endif %}
           </ul>
           <ul class="nav navbar-nav navbar-right">
             {% if user.is_authenticated %}

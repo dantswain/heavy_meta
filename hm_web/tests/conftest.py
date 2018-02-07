@@ -6,6 +6,8 @@ import pytest
 
 from django.contrib.auth.models import User
 
+from hm_web.models import Song
+
 # pylint: disable=redefined-outer-name,missing-docstring
 
 
@@ -31,3 +33,10 @@ def logged_in_user(user, password, client):
     client.login(username=user.username, password=password)
 
     return user
+
+@pytest.fixture
+def song(user):
+    song = Song(title="Travolta",
+                created_by=user)
+    song.save()
+    return song

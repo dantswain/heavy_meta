@@ -17,5 +17,6 @@ urlpatterns = [
     path('logout',
          auth_views.LogoutView.as_view(next_page='/'),
          name='logout'),
-    path('songs', views.SongList.as_view(), name='songs')
+    path('songs', views.SongList.as_view(), name='songs'),
+    path('songs/<int:pk>', views.song, name='song'),
 ]

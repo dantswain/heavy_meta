@@ -4,7 +4,7 @@
 <h2>Songs</h2>
 <ul>
   {% for song in song_list %}
-  <li>{{ song.title  }}</li>
+  <li><a href="/songs/{{ song.id  }}">{{ song.title  }}</a></li>
   {% empty %}
   <li>No songs yet</li>
   {% endfor %}
